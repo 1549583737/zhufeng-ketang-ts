@@ -1,7 +1,16 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-view></router-view>
+    <van-tabbar>
+      <van-tabbar-item to="/" icon="home-o">首页</van-tabbar-item>
+      <van-tabbar-item to="/mine" icon="orders-o">课程页</van-tabbar-item>
+      <van-tabbar-item to="/profile" icon="manager-o">个人中心</van-tabbar-item>
+    </van-tabbar>
+
+
+<!--    <router-link to="/">Home</router-link> |-->
+<!--    <router-link to="/mine">Mine</router-link>-->
+<!--    <router-link to="/profile">Profile</router-link>-->
   </div>
   <router-view />
 </template>
