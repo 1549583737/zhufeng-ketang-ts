@@ -1,3 +1,6 @@
 export enum CATEGORY_TYPES {
-    ALL
+    ALL,
+    REACT,
+    VUE,
+    NODE
 }

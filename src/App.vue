@@ -1,6 +1,10 @@
 <template>
   <div id="nav">
-    <router-view></router-view>
+    <router-view v-slot="{Component}">
+      <keep-alive>
+        <component :is="Component"></component>
+      </keep-alive>
+    </router-view>
     <van-tabbar>
       <van-tabbar-item to="/" icon="home-o">首页</van-tabbar-item>
       <van-tabbar-item to="/mine" icon="orders-o">课程页</van-tabbar-item>
@@ -12,7 +16,6 @@
 <!--    <router-link to="/mine">Mine</router-link>-->
 <!--    <router-link to="/profile">Profile</router-link>-->
   </div>
-  <router-view />
 </template>
 
 <style lang="scss">
